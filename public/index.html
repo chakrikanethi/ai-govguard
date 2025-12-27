@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-GovGuard Fraud Auditor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo-area">
+                <h1>AI-GovGuard</h1>
+                <p class="subtitle">AI-Powered Public Expenditure Auditing</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="icon-cloud">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2>Upload Invoice Data</h2>
+                    <p>Drag & drop PDF, PNG, JPG or JSON files here</p>
+                    <button class="btn-select">Select Files</button>
+                    <input type="file" id="file-input" hidden>
+                </div>
+            </section>
+
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Documents Processed</h3>
+                    <div class="stat-value" id="stats-processed">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Flagged for Review</h3>
+                    <div class="stat-value warning" id="stats-flagged">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Estimated Savings</h3>
+                    <div class="stat-value success" id="stats-savings">$0.00</div>
+                </div>
+            </section>
+
+            <!-- Recent Analysis -->
+            <section class="recent-analysis">
+                <h2>Recent Analysis</h2>
+                <div class="table-container">
+                    <table class="analysis-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice ID</th>
+                                <th>Vendor</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Risk Factors</th>
+                            </tr>
+                        </thead>
+                        <tbody id="analysis-rows">
+                            <!-- Rows will be populated by JS -->
+                            <tr class="empty-state">
+                                <td colspan="6">No documents analyzed yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

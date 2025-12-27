@@ -1,0 +1,29 @@
+[
+    {
+        "invoice_id": "INV-TEST-001",
+        "description": "Case 1: Public Works High Value",
+        "amount": 81000,
+        "department": "Public Works",
+        "date": "2024-05-20",
+        "vendor": "Big Builders Ltd",
+        "previous_transactions": []
+    },
+    {
+        "invoice_id": "INV-TEST-002",
+        "description": "Case 2: Education Low Value",
+        "amount": 978,
+        "department": "Education",
+        "date": "2024-06-15",
+        "vendor": "Office Supplies Co",
+        "previous_transactions": []
+    },
+    {
+        "invoice_id": "INV-TEST-003",
+        "description": "Case 3: Repeated Amount",
+        "amount": 45000,
+        "department": "IT Services",
+        "date": "2024-06-10",
+        "vendor": "Tech Solutions",
+        "previous_transactions": [{"amount": 45000, "date": "2024-05-10"}]
+    }
+]
