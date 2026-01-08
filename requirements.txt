@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+pytest
+httpx
+google-cloud-documentai
+google-generativeai
+neo4j
