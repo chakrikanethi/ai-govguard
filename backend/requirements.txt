@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+google-cloud-bigquery
+pandas
+pydantic-settings
+scikit-learn
+pytest
+httpx
